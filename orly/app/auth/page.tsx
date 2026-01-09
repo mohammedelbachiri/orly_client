@@ -82,7 +82,7 @@ const AuthPage = () => {
           </div>
 
           {/* Form */}
-          <div className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
             {!isLogin && (
               <div className="flex justify-center mb-6">
                 <div className="relative">
@@ -204,12 +204,12 @@ const AuthPage = () => {
             )}
 
             <button
-              onClick={handleSubmit}
+              
               className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg"
             >
               {isLogin ? 'Sign In' : 'Create Account'}
             </button>
-          </div>
+          </form>
 
           {/* Social Login */}
             {/* <div className="mt-6">
