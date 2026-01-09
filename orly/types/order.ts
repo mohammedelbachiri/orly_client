@@ -1,3 +1,6 @@
+import { Payment } from "./payment";
+import { Product } from "./product";
+
 export type OrderStatus = 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
 
 export interface Order {
