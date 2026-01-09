@@ -475,7 +475,7 @@ export default function Home() {
 
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/70">
-            <p>© {year.toString()} Orly. All rights reserved. Parisian light. French heritage.</p>
+            <p>© {year.getFullYear().toString()} Orly. All rights reserved. Parisian light. French heritage.</p>
             <div className="flex gap-6 mt-6 md:mt-0">
               <a href="#" className="hover:text-secondary transition-colors">
                 Terms
