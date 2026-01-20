@@ -1,1 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
+@import "tw-animate-css";
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Added gold accent color for luxury badges and premium feel */
+  --background: #f3f4f4;
+  --foreground: #061e29;
+  --card: #ffffff;
+  --card-foreground: #061e29;
+  --popover: #ffffff;
+  --popover-foreground: #061e29;
+  --primary: #1d546d;
+  --primary-foreground: #ffffff;
+  --secondary: #5f9598;
+  --secondary-foreground: #ffffff;
+  --muted: #f3f4f4;
+  --muted-foreground: #5f9598;
+  --accent: #d4af37;
+  --accent-foreground: #061e29;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #f3f4f4;
+  --ring: #1d546d;
+  --chart-1: #1d546d;
+  --chart-2: #5f9598;
+  --chart-3: #061e29;
+  --chart-4: #f3f4f4;
+  --chart-5: #e5e7eb;
+  --radius: 0.25rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #061e29;
+  --sidebar-primary: #1d546d;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5f9598;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #1d546d;
+}
+
+.dark {
+  --background: #061e29;
+  --foreground: #f3f4f4;
+  --card: #0f3847;
+  --card-foreground: #f3f4f4;
+  --popover: #0f3847;
+  --popover-foreground: #f3f4f4;
+  --primary: #5f9598;
+  --primary-foreground: #061e29;
+  --secondary: #1d546d;
+  --secondary-foreground: #f3f4f4;
+  --muted: #0f3847;
+  --muted-foreground: #5f9598;
+  --accent: #d4af37;
+  --accent-foreground: #061e29;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1d546d;
+  --input: #0f3847;
+  --ring: #5f9598;
+  --chart-1: #5f9598;
+  --chart-2: #1d546d;
+  --chart-3: #f3f4f4;
+  --chart-4: #061e29;
+  --chart-5: #0f3847;
+  --sidebar: #0f3847;
+  --sidebar-foreground: #f3f4f4;
+  --sidebar-primary: #5f9598;
+  --sidebar-primary-foreground: #061e29;
+  --sidebar-accent: #1d546d;
+  --sidebar-accent-foreground: #f3f4f4;
+  --sidebar-border: #1d546d;
+  --sidebar-ring: #5f9598;
+}
+
+@theme inline {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  /* Elegant serif typography for headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
